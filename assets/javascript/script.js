@@ -38,8 +38,6 @@ const saveBtn3 = document.querySelector('#save-btn3')
 const saveBtn4 = document.querySelector('#save-btn4')
 const saveBtn5 = document.querySelector('#save-btn5')
 
-
-
 // determine what hour it is and color code boxes accordingly
 if (currentHour === "9") {
     nine.classList.add('current-time');
@@ -93,3 +91,328 @@ if (currentHour === "17") {
     five.classList.add('current-time');
 };
 
+//----------------------------
+//changed text in hour-box9
+// task text was clicked
+$("#hour-box9").on("click", "p", function () {
+    // get current text of p element
+    var text = $(this)
+        .text()
+        .trim();
+
+    // replace p element with a new textarea
+    var textInput = $("<textarea>").addClass("form-control").val(text);
+    $(this).replaceWith(textInput);
+
+    // auto focus new element
+    textInput.trigger("focus");
+});
+
+
+// editable field was un-focused
+$("#hour-box9").on("blur", "textarea", function () {
+    // get current value of textarea
+    var text = $(this).val();
+
+    // save to local storage
+    localStorage.setItem('9am-task', text);
+
+    // recreate p element
+    var taskP = $("<p>")
+        .attr("id", "textarea9")
+        .addClass("event-item")
+        .text(text);
+
+    // replace textarea with new content
+    $(this).replaceWith(taskP);
+});
+
+//-----------------------------
+
+// changed text in hour-box10
+// task text was clicked
+$("#hour-box10").on("click", "p", function () {
+    // get current text of p element
+    var text = $(this)
+        .text()
+        .trim();
+
+    // replace p element with a new textarea
+    var textInput = $("<textarea>").addClass("form-control").val(text);
+    $(this).replaceWith(textInput);
+
+    // auto focus new element
+    textInput.trigger("focus");
+});
+
+// editable field was un-focused
+$("#hour-box10").on("blur", "textarea", function () {
+    // get current value of textarea
+    var text = $(this).val();
+
+    // save to local storage
+    localStorage.setItem('10am-task', text);
+
+    // recreate p element
+    var taskP = $("<p>")
+        .attr("id", "textarea10")
+        .addClass("event-item")
+        .text(text);
+
+    // replace textarea with new content
+    $(this).replaceWith(taskP);
+});
+
+//-----------------------------
+
+// changed text in hour-box11
+// task text was clicked
+$("#hour-box11").on("click", "p", function () {
+    // get current text of p element
+    var text = $(this)
+        .text()
+        .trim();
+
+    // replace p element with a new textarea
+    var textInput = $("<textarea>").addClass("form-control").val(text);
+    $(this).replaceWith(textInput);
+
+    // auto focus new element
+    textInput.trigger("focus");
+});
+
+// editable field was un-focused
+$("#hour-box11").on("blur", "textarea", function () {
+    // get current value of textarea
+    var text = $(this).val();
+
+    // save to local storage
+    localStorage.setItem('11am-task', text);
+
+    // recreate p element
+    var taskP = $("<p>")
+        .attr("id", "textarea11")
+        .addClass("event-item")
+        .text(text);
+
+    // replace textarea with new content
+    $(this).replaceWith(taskP);
+});
+
+//-----------------------------
+
+// changed text in hour-box12
+// task text was clicked
+$("#hour-box12").on("click", "p", function () {
+    // get current text of p element
+    var text = $(this)
+        .text()
+        .trim();
+
+    // replace p element with a new textarea
+    var textInput = $("<textarea>").addClass("form-control").val(text);
+    $(this).replaceWith(textInput);
+
+    // auto focus new element
+    textInput.trigger("focus");
+});
+
+// editable field was un-focused
+$("#hour-box12").on("blur", "textarea", function () {
+    // get current value of textarea
+    var text = $(this).val();
+
+    // save to local storage
+    localStorage.setItem('12pm-task', text);
+
+    // recreate p element
+    var taskP = $("<p>")
+        .attr("id", "textarea12")
+        .addClass("event-item")
+        .text(text);
+
+    // replace textarea with new content
+    $(this).replaceWith(taskP);
+});
+
+//-----------------------------
+
+// changed text in hour-box1
+// task text was clicked
+$("#hour-box1").on("click", "p", function () {
+    // get current text of p element
+    var text = $(this)
+        .text()
+        .trim();
+
+    // replace p element with a new textarea
+    var textInput = $("<textarea>").addClass("form-control").val(text);
+    $(this).replaceWith(textInput);
+
+    // auto focus new element
+    textInput.trigger("focus");
+});
+
+// editable field was un-focused
+$("#hour-box1").on("blur", "textarea", function () {
+    // get current value of textarea
+    var text = $(this).val();
+
+    // save to local storage
+    localStorage.setItem('1pm-task', text);
+
+    // recreate p element
+    var taskP = $("<p>")
+        .attr("id", "textarea1")
+        .addClass("event-item")
+        .text(text);
+
+    // replace textarea with new content
+    $(this).replaceWith(taskP);
+});
+
+//-----------------------------
+
+// changed text in hour-box2
+// task text was clicked
+$("#hour-box2").on("click", "p", function () {
+    // get current text of p element
+    var text = $(this)
+        .text()
+        .trim();
+
+    // replace p element with a new textarea
+    var textInput = $("<textarea>").addClass("form-control").val(text);
+    $(this).replaceWith(textInput);
+
+    // auto focus new element
+    textInput.trigger("focus");
+});
+
+// editable field was un-focused
+$("#hour-box2").on("blur", "textarea", function () {
+    // get current value of textarea
+    var text = $(this).val();
+
+    // save to local storage
+    localStorage.setItem('2pm-task', text);
+
+    // recreate p element
+    var taskP = $("<p>")
+        .attr("id", "textarea2")
+        .addClass("event-item")
+        .text(text);
+
+    // replace textarea with new content
+    $(this).replaceWith(taskP);
+});
+
+//-----------------------------
+
+// changed text in hour-box3
+// task text was clicked
+$("#hour-box3").on("click", "p", function () {
+    // get current text of p element
+    var text = $(this)
+        .text()
+        .trim();
+
+    // replace p element with a new textarea
+    var textInput = $("<textarea>").addClass("form-control").val(text);
+    $(this).replaceWith(textInput);
+
+    // auto focus new element
+    textInput.trigger("focus");
+});
+
+// editable field was un-focused
+$("#hour-box3").on("blur", "textarea", function () {
+    // get current value of textarea
+    var text = $(this).val();
+
+    // save to local storage
+    localStorage.setItem('3pm-task', text);
+
+    // recreate p element
+    var taskP = $("<p>")
+        .attr("id", "textarea3")
+        .addClass("event-item")
+        .text(text);
+
+    // replace textarea with new content
+    $(this).replaceWith(taskP);
+});
+
+//-----------------------------
+
+// changed text in hour-box4
+// task text was clicked
+$("#hour-box4").on("click", "p", function () {
+    // get current text of p element
+    var text = $(this)
+        .text()
+        .trim();
+
+    // replace p element with a new textarea
+    var textInput = $("<textarea>").addClass("form-control").val(text);
+    $(this).replaceWith(textInput);
+
+    // auto focus new element
+    textInput.trigger("focus");
+});
+
+// editable field was un-focused
+$("#hour-box4").on("blur", "textarea", function () {
+    // get current value of textarea
+    var text = $(this).val();
+
+    // save to local storage
+    localStorage.setItem('4pm-task', text);
+
+    // recreate p element
+    var taskP = $("<p>")
+        .attr("id", "textarea4")
+        .addClass("event-item")
+        .text(text);
+
+    // replace textarea with new content
+    $(this).replaceWith(taskP);
+});
+
+//-----------------------------
+
+// changed text in hour-box5
+// task text was clicked
+$("#hour-box5").on("click", "p", function () {
+    // get current text of p element
+    var text = $(this)
+        .text()
+        .trim();
+
+    // replace p element with a new textarea
+    var textInput = $("<textarea>").addClass("form-control").val(text);
+    $(this).replaceWith(textInput);
+
+    // auto focus new element
+    textInput.trigger("focus");
+});
+
+// editable field was un-focused
+$("#hour-box5").on("blur", "textarea", function () {
+    // get current value of textarea
+    var text = $(this).val();
+
+    // save to local storage
+    localStorage.setItem('5pm-task', text);
+
+    // recreate p element
+    var taskP = $("<p>")
+        .attr("id", "textarea5")
+        .addClass("event-item")
+        .text(text);
+
+    // replace textarea with new content
+    $(this).replaceWith(taskP);
+});
+
+//-----------------------------
