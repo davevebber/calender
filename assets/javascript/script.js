@@ -39,3 +39,57 @@ const saveBtn4 = document.querySelector('#save-btn4')
 const saveBtn5 = document.querySelector('#save-btn5')
 
 
+
+// determine what hour it is and color code boxes accordingly
+if (currentHour === "9") {
+    nine.classList.add('current-time');
+    ten.classList.add('future-time');
+};
+
+if (currentHour === "10") {
+    nine.classList.add('past-time');
+    ten.classList.add('current-time');
+    eleven.classList.add('future-time');
+};
+
+if (currentHour === "11") {
+    ten.classList.add('past-time');
+    eleven.classList.add('current-time');
+    twelve.classList.add('future-time');
+};
+
+if (currentHour === "12") {
+    eleven.classList.add('past-time');
+    twelve.classList.add('current-time');
+    one.classList.add('future-time');
+};
+
+if (currentHour === "13") {
+    twelve.classList.add('past-time');
+    one.classList.add('current-time');
+    two.classList.add('future-time');
+};
+
+if (currentHour === "14") {
+    one.classList.add('past-time');
+    two.classList.add('current-time');
+    three.classList.add('future-time');
+};
+
+if (currentHour === "15") {
+    two.classList.add('past-time');
+    three.classList.add('current-time');
+    four.classList.add('future-time');
+};
+
+if (currentHour === "16") {
+    three.classList.add('past-time');
+    four.classList.add('current-time');
+    five.classList.add('future-time');
+};
+
+if (currentHour === "17") {
+    four.classList.add('past-time');
+    five.classList.add('current-time');
+};
+
