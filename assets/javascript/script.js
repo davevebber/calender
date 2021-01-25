@@ -5,7 +5,7 @@ let currentDate = document.getElementById('current-date').innerHTML = "Current T
 let currentHour = JSON.stringify(moment().format('H'));
 console.log(currentHour);
 
-// textarea
+// text areas - where the tasks go
 let textarea9 = document.querySelector("#textarea9")
 let textarea10 = document.querySelector("#textarea10")
 let textarea11 = document.querySelector("#textarea11")
@@ -16,7 +16,7 @@ let textarea3 = document.querySelector("#textarea3")
 let textarea4 = document.querySelector("#textarea4")
 let textarea5 = document.querySelector("#textarea5")
 
-// time blocks
+// time blocks - 9am/10am/etc
 const nine = document.querySelector("#nine-am");
 const ten = document.querySelector('#ten-am');
 const eleven = document.querySelector('#eleven-am');
@@ -27,7 +27,7 @@ const three = document.querySelector('#three-pm');
 const four = document.querySelector('#four-pm');
 const five = document.querySelector('#five-pm');
 
-// save btns
+// save buttons
 const saveBtn9 = document.querySelector('#save-btn9')
 const saveBtn10 = document.querySelector('#save-btn10')
 const saveBtn11 = document.querySelector('#save-btn11')
@@ -37,6 +37,94 @@ const saveBtn2 = document.querySelector('#save-btn2')
 const saveBtn3 = document.querySelector('#save-btn3')
 const saveBtn4 = document.querySelector('#save-btn4')
 const saveBtn5 = document.querySelector('#save-btn5')
+
+// load tasks into hour boxes
+function loadTasks() {
+    // 9am tasks
+    let taskNine = localStorage.getItem('9am-task')
+    if (taskNine === null) {
+        return;
+    } else {
+        textarea9.textContent = taskNine;
+    };
+
+    // 10am tasks
+    let taskTen = localStorage.getItem('10am-task')
+    if (taskTen === null) {
+        return;
+    } else {
+        textarea10.textContent = taskTen;
+    };
+
+    // 11am tasks
+    let taskEleven = localStorage.getItem('11am-task')
+    if (taskEleven === null) {
+        return;
+    } else {
+        textarea11.textContent = taskEleven;
+    };
+
+    // 12pm tasks
+    let taskTwelve = localStorage.getItem('12pm-task')
+    if (taskTwelve === null) {
+        return;
+    } else {
+        textarea12.textContent = taskTwelve;
+    };
+
+    // 1pm tasks
+    let taskOne = localStorage.getItem('1pm-task')
+    if (taskOne === null) {
+        return;
+    } else {
+        textarea1.textContent = taskOne;
+    };
+
+    // 2pm tasks
+    let taskTwo = localStorage.getItem('2pm-task')
+    if (taskTwo === null) {
+        return;
+    } else {
+        textarea2.textContent = taskTwo;
+    };
+
+    // 3pm tasks
+    let taskThree = localStorage.getItem('3pm-task')
+    if (taskThree === null) {
+        return;
+    } else {
+        textarea3.textContent = taskThree;
+    };
+
+    // 4pm tasks
+    let taskFour = localStorage.getItem('4pm-task')
+    if (taskFour === null) {
+        return;
+    } else {
+        textarea4.textContent = taskFour;
+    };
+
+    // 5pm tasks
+    let taskFive = localStorage.getItem('5pm-task')
+    if (taskFive === null) {
+        return;
+    } else {
+        textarea5.textContent = taskFive;
+    };
+};
+
+// run function load tasks
+loadTasks();
+
+// figure out how to save with button click
+//---------------------------------
+// when button is clicked save event to local storage
+// saveBtn9.addEventListener('click', saveEvent9);
+
+// function saveEvent9() {
+//     let taskNine = localStorage.setItem('9am-task', JSON.stringify(textarea9));
+//     console.log(taskNine);
+// }
 
 // determine what hour it is and color code boxes accordingly
 if (currentHour === "9") {
@@ -92,7 +180,7 @@ if (currentHour === "17") {
 };
 
 //----------------------------
-//changed text in hour-box9
+//changes text in hour-box9
 // task text was clicked
 $("#hour-box9").on("click", "p", function () {
     // get current text of p element
@@ -129,7 +217,7 @@ $("#hour-box9").on("blur", "textarea", function () {
 
 //-----------------------------
 
-// changed text in hour-box10
+// changes text in hour-box10
 // task text was clicked
 $("#hour-box10").on("click", "p", function () {
     // get current text of p element
@@ -165,7 +253,7 @@ $("#hour-box10").on("blur", "textarea", function () {
 
 //-----------------------------
 
-// changed text in hour-box11
+// changes text in hour-box11
 // task text was clicked
 $("#hour-box11").on("click", "p", function () {
     // get current text of p element
@@ -201,7 +289,7 @@ $("#hour-box11").on("blur", "textarea", function () {
 
 //-----------------------------
 
-// changed text in hour-box12
+// changes text in hour-box12
 // task text was clicked
 $("#hour-box12").on("click", "p", function () {
     // get current text of p element
@@ -237,7 +325,7 @@ $("#hour-box12").on("blur", "textarea", function () {
 
 //-----------------------------
 
-// changed text in hour-box1
+// changes text in hour-box1
 // task text was clicked
 $("#hour-box1").on("click", "p", function () {
     // get current text of p element
@@ -273,7 +361,7 @@ $("#hour-box1").on("blur", "textarea", function () {
 
 //-----------------------------
 
-// changed text in hour-box2
+// changes text in hour-box2
 // task text was clicked
 $("#hour-box2").on("click", "p", function () {
     // get current text of p element
@@ -309,7 +397,7 @@ $("#hour-box2").on("blur", "textarea", function () {
 
 //-----------------------------
 
-// changed text in hour-box3
+// changes text in hour-box3
 // task text was clicked
 $("#hour-box3").on("click", "p", function () {
     // get current text of p element
@@ -345,7 +433,7 @@ $("#hour-box3").on("blur", "textarea", function () {
 
 //-----------------------------
 
-// changed text in hour-box4
+// changes text in hour-box4
 // task text was clicked
 $("#hour-box4").on("click", "p", function () {
     // get current text of p element
@@ -381,7 +469,7 @@ $("#hour-box4").on("blur", "textarea", function () {
 
 //-----------------------------
 
-// changed text in hour-box5
+// changes text in hour-box5
 // task text was clicked
 $("#hour-box5").on("click", "p", function () {
     // get current text of p element
@@ -414,5 +502,3 @@ $("#hour-box5").on("blur", "textarea", function () {
     // replace textarea with new content
     $(this).replaceWith(taskP);
 });
-
-//-----------------------------
