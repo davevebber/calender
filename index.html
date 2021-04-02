@@ -2,18 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <!-- font awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-  <!-- css stylesheet -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <title>Work Day Scheduler</title>
 </head>
 
@@ -22,81 +17,85 @@
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
-    </br>
-    </br>
-    <span id="current-date"></span>
   </header>
-
-  <span id="localStorage"></span>
   <div class="container">
-    <div class="row">
-
-      <!-- 9AM Row -->
-      <div id="nine-am" class="col-1 border center-items">9AM</div>
-
-      <div id="hour-box9" class="col-11 scheduled-event border">
-        <p id="textarea9" class="event-item">click here to add task</p>
+    <div id="hour-9" class="row time-block">
+      <div class="col-md-1 hour">
+        9AM
       </div>
-
-      <!-- 10AM Row -->
-      <div id="ten-am" class="col-1 border center-items">10AM</div>
-
-      <div id="hour-box10" class="col-11 scheduled-event border">
-        <p id="textarea10" class="event-item">click here to add task</p>
-      </div>
-
-      <!-- 11AM Row -->
-      <div id="eleven-am" class="col-1 border center-items">11AM</div>
-      <div id="hour-box11" class="col-11 scheduled-event border">
-        <p id="textarea11" class="event-item">click here to add task</p>
-      </div>
-
-      <!-- 12pm Row -->
-      <div id="twelve-pm" class="col-1 border center-items">12PM</div>
-      <div id="hour-box12" class="col-11 scheduled-event border">
-        <p id="textarea12" class="event-item">click here to add task</p>
-      </div>
-
-      <!-- 1pm Row -->
-      <div id="one-pm" class="col-1 border center-items">1PM</div>
-      <div id="hour-box1" class="col-11 scheduled-event border">
-        <p id="textarea1" class="event-item">click here to add task</p>
-      </div>
-
-      <!-- 2pm Row -->
-      <div id="two-pm" class="col-1 border center-items">2PM</div>
-      <div id="hour-box2" class="col-11 scheduled-event border">
-        <p id="textarea2" class="event-item">click here to add task</p>
-      </div>
-
-      <!-- 3pm Row -->
-      <div id="three-pm" class="col-1 border center-items">3PM</div>
-      <div id="hour-box3" class="col-11 scheduled-event border">
-        <p id="textarea3" class="event-item">click here to add task</p>
-      </div>
-
-      <!-- 4pm Row -->
-      <div id="four-pm" class="col-1 border center-items">4PM</div>
-      <div id="hour-box4" class="col-11 scheduled-event border">
-        <p id="textarea4" class="event-item">click here to add task</p>
-      </div>
-
-      <!-- 5pm Row -->
-      <div id="five-pm" class="col-1 border center-items">5PM</div>
-      <div id="hour-box5" class="col-11 scheduled-event border">
-        <p id="textarea5" class="event-item">click here to add task</p>
-      </div>
-
+      <textarea class="col-md-10 description">
+      </textarea>
+      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
-  </div>
+    <div id="hour-10" class="row time-block">
+      <div class="col-md-1 hour">
+        10AM
+      </div>
+      <textarea class="col-md-10 description">
+      </textarea>
+      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+    </div>
+    <div id="hour-11" class="row time-block">
+      <div class="col-md-1 hour">
+        11AM
+      </div>
+      <textarea class="col-md-10 description">
+      </textarea>
+      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+    </div>
+    <div id="hour-12" class="row time-block">
+      <div class="col-md-1 hour">
+        12PM
+      </div>
+      <textarea class="col-md-10 description">
+      </textarea>
+      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+    </div>
+   <div id="hour-13" class="row time-block">
+      <div class="col-md-1 hour">
+        1PM
+      </div>
+      <textarea class="col-md-10 description">
+      </textarea>
+      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+    </div>
+    <div id="hour-14" class="row time-block">
+      <div class="col-md-1 hour">
+        2PM
+      </div>
+      <textarea class="col-md-10 description">
+      </textarea>
+      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+    </div>
+    <div id="hour-15" class="row time-block">
+     <div class="col-md-1 hour">
+        3PM
+      </div>
+      <textarea class="col-md-10 description">
+      </textarea>
+      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+    </div>
+    <div id="hour-16" class="row time-block">
+      <div class="col-md-1 hour">
+        4PM
+      </div>
+      <textarea class="col-md-10 description">
+      </textarea>
+      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+    </div>
+    <div id="hour-17" class="row time-block">
+      <div class="col-md-1 hour">
+        5PM
+      </div>
+      <textarea class="col-md-10 description">
+      </textarea>
+      <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="assets/javascript/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

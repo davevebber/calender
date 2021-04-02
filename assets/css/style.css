@@ -33,13 +33,28 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;
+  border-top: 1px solid white;;
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+}
+
+.past {
+  background-color: #d3d3d3;
+  color: white;
+}
+
+.present {
+  background-color: #ff6961;
+  color: white;
+}
+
+.future {
+  background-color: #77dd77;
+  color: white;
 }
 
 .saveBtn {
@@ -53,22 +68,4 @@ textarea{
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
-}
-
-.center-items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.current-time {
-  background-color: #77dd77;
-}
-
-.past-time {
-  background-color: gray;
-}
-
-.future-time {
-  background-color: rgb(241, 241, 127);
 }
